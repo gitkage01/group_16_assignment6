@@ -45,3 +45,26 @@ class Ball {
     
   }
 }
+
+class superball{
+  float vx,vy, ax,ay,m,x,y;
+  void gravity(){
+    vy+=9.8*m/60;
+  }
+  void update(){
+    x+=vx/60;
+    y+=vy/60;
+
+    if ((x>=1270)|| (x<=20)){
+      vx=-vx;
+    }
+    if ((y>=700)||(y<=20)){
+      vy=-vy;
+    }
+      
+  }
+  void display(){
+    fill(255,255,255);
+    ellipse(x,y,20,20);
+  }
+}
